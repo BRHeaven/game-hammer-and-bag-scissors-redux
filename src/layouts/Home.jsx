@@ -1,21 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import "../css/main.css";
-function Home(props) {
+import User from './User';
+import Play from './Play';
+import Bot from './Bot';
+export default function Home(props) {
   return (
-    <section>
-
+    <section id='home'>
+      <div className="homeContent">
+        <User/>
+        <Play/>
+        <Bot/>
+      </div>
     </section>
   );
 };
-const mapStateToProps = state => {
-    return {
-
-    };
-};
-const mapDispatchToProps = (dispatch) => {
-    return {
-
-    };
-};
-export default connect(mapStateToProps,mapDispatchToProps)(Home);

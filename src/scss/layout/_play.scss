@@ -1,0 +1,94 @@
+#gameDisplay {
+    grid-column: 4 / span 6;
+    .displayResult {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        h2 {
+            @include styleText($fs-3, $fw-bolder, $tt-uppercase, $ta-center, 1px);
+        }
+        .resultList {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 20px auto;
+            .resultItem {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                width: 100%;
+                padding: 5px 0;
+                margin: 10px auto;
+                h3 {
+                    @include styleText($fs-2, $fw-bold, $tt-capitalize, $ta-center, .5px);
+                }
+                p {
+                    @include styleText($fs-2, $fw-bold, $tt-normal, $ta-center, .5px);
+                }
+            }
+        }
+    }
+    .displayBattle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: 2px solid $color-black;
+            border-radius: 10px;
+        }
+    }
+    .displayButtonGame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        button {
+            position: relative;
+            @include styleText($fs-3, $fw-bold, $tt-capitalize, $ta-center, 1px);
+            padding: 10px 20px;
+            margin: 20px 10px;
+            overflow: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                top: -10%;
+                left: -220%;
+                display: block;
+                width: 200%;
+                height: 200%;
+                background-color: $color-white;
+                opacity: .1;
+                transform: skewX(-20deg);
+                transition: all .2s;
+            }
+            &:hover {
+                &::after {
+                    left: -30%;
+                }
+            }
+        }
+        #start {
+            @include colorText($color-white, $color-green-400, 2px, $color-green-400, 10px);
+            transition: all .4s;
+            &:hover {
+                color: $color-green-400;
+                background-color: $color-white;
+                border: 2px solid $color-green-400;
+            }
+        }
+        #end {
+            @include colorText($color-white, $color-red-400, 2px, $color-red-400, 10px);
+            transition: all .4s;
+            &:hover {
+                color: $color-red-400;
+                background-color: $color-white;
+                border: 2px solid $color-red-400;
+            }
+        }
+    }
+}

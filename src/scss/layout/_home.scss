@@ -1,0 +1,16 @@
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 10em auto;
+    .homeContent {
+        display: grid;
+        grid-template-columns: repeat( 12, 1fr);
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+}

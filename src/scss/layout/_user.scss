@@ -1,0 +1,61 @@
+#user {
+    grid-column: 1 / span 2;
+}
+#bot {
+    grid-column: 11 / span 2;
+}
+.displayPlayer {
+    display: block;
+    width: 100%;
+    padding: 5px 20px;
+    margin: 0 auto;
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: 2px solid $color-green-300;
+            border-radius: 50%;
+        }
+    }
+    .heart {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        padding: 0 50px;
+        margin: 10px auto;
+        p {
+            @include styleText($fs-3, unset, unset, $ta-center, unset);
+        }
+    }
+    .select {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        button {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            border: 5px solid $color-transparent;
+            border-radius: 10px;
+            transition: all .4s;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #selectUser {
+        button {
+            &:hover {
+                border: 5px solid $color-green-400;
+            }
+        }
+    }
+}

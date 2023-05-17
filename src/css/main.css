@@ -1,3 +1,231 @@
-html {
+a, p, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  position: unset;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  padding: 0;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 10em auto;
+}
+#home .homeContent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#user {
+  grid-column: 1/span 2;
+}
+
+#bot {
+  grid-column: 11/span 2;
+}
+
+.displayPlayer {
+  display: block;
+  width: 100%;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+.displayPlayer .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.displayPlayer .images img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #81C784;
+  border-radius: 50%;
+}
+.displayPlayer .heart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  padding: 0 50px;
+  margin: 10px auto;
+}
+.displayPlayer .heart p {
+  font-size: 21px;
+  font-weight: unset;
+  text-transform: unset;
+  text-align: center;
+  letter-spacing: unset;
+}
+.displayPlayer .select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+.displayPlayer .select button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.displayPlayer .select button img {
+  width: 100%;
+}
+.displayPlayer #selectUser button:hover {
+  border: 5px solid #66BB6A;
+}
+
+#gameDisplay {
+  grid-column: 4/span 6;
+}
+#gameDisplay .displayResult {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+#gameDisplay .displayResult h2 {
+  font-size: 21px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#gameDisplay .displayResult .resultList {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 20px auto;
+}
+#gameDisplay .displayResult .resultList .resultItem {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 5px 0;
+  margin: 10px auto;
+}
+#gameDisplay .displayResult .resultList .resultItem h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+#gameDisplay .displayResult .resultList .resultItem p {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: normal;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+#gameDisplay .displayBattle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gameDisplay .displayBattle img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+#gameDisplay .displayButtonGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+#gameDisplay .displayButtonGame button {
   position: relative;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  overflow: hidden;
+}
+#gameDisplay .displayButtonGame button::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -220%;
+  display: block;
+  width: 200%;
+  height: 200%;
+  background-color: #FFFFFF;
+  opacity: 0.1;
+  transform: skewX(-20deg);
+  transition: all 0.2s;
+}
+#gameDisplay .displayButtonGame button:hover::after {
+  left: -30%;
+}
+#gameDisplay .displayButtonGame #start {
+  color: #FFFFFF;
+  background-color: #66BB6A;
+  border: 2px solid #66BB6A;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+#gameDisplay .displayButtonGame #start:hover {
+  color: #66BB6A;
+  background-color: #FFFFFF;
+  border: 2px solid #66BB6A;
+}
+#gameDisplay .displayButtonGame #end {
+  color: #FFFFFF;
+  background-color: #EF5350;
+  border: 2px solid #EF5350;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+#gameDisplay .displayButtonGame #end:hover {
+  color: #EF5350;
+  background-color: #FFFFFF;
+  border: 2px solid #EF5350;
+}
+
+html, body {
+  background-color: #7986CB;
 }/*# sourceMappingURL=main.css.map */
